@@ -571,6 +571,24 @@
                 </div>
             </div>
 
+            <!-- NEW: Financial Analytics Dashboard Project -->
+            <div class="project-card dashboard" onclick="openModal('finance1')">
+                <div class="project-type-badge">Power BI Dashboard</div>
+                <div class="project-content">
+                    <h3 class="project-title">Financial Analytics Dashboard</h3>
+                    <p class="project-description">
+                        Company deep-dive with peer benchmarking: profitability trends, sector comparisons, and KPI drill-through using a star schema and dedicated measures table.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <a href="#" class="project-link" target="_blank">View Dashboard →</a>
+                </div>
+            </div>
+
             <!-- ML Project -->
             <div class="project-card ml" onclick="openModal('ml1')">
                 <div class="project-type-badge">Machine Learning</div>
@@ -664,6 +682,58 @@
         </div>
     </div>
 
+    <!-- NEW: Financial Analytics Dashboard Modal -->
+    <div id="finance1Modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('finance1')">&times;</span>
+            <h2>Financial Analytics Dashboard</h2>
+            <p style="margin: 1rem 0; line-height: 1.8; color: var(--text-light);">
+                A company deep-dive dashboard for finance leaders. Built on a star schema with <strong>DimCompany</strong>, <strong>DimDate</strong>, and <strong>FactFinancials</strong>, plus a dedicated <strong>Measures</strong> table. Designed for single-company analysis with sector peer benchmarks.
+            </p>
+
+            <h3>Key Features</h3>
+            <ul style="margin: 1rem 0; line-height: 1.8; color: var(--text-light);">
+                <li><strong>Peer Benchmarking:</strong> Compare a selected company to sector averages using dynamic DAX.</li>
+                <li><strong>Profitability Waterfall:</strong> Visualize movement from Revenue → Gross Profit → Operating Profit → Net Income.</li>
+                <li><strong>Scatter Plot (Peers):</strong> Evaluate companies on metrics like Margin vs Growth; tooltip shows key KPIs.</li>
+                <li><strong>Measure Catalog:</strong> Organized folders: Profitability, Liquidity &amp; Leverage, Efficiency, Valuation.</li>
+                <li><strong>Slicers:</strong> Company (single-select) and Date; all visuals respect context.</li>
+            </ul>
+
+            <h3>Tech Stack</h3>
+            <p style="margin: 0.5rem 0; color: var(--text-light);">
+                Power BI · DAX · SQL · Python (prep) · Star Schema
+            </p>
+
+            <!-- Dashboard Screenshots Placeholders -->
+            <div style="margin: 2rem 0;">
+                <h3>Dashboard Views</h3>
+
+                <div style="margin: 1.5rem 0;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Overview</h4>
+                    <img src="Financial Analytics/Page 1.jpg" alt="Financial Analytics Overview"
+                        style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+
+                <div style="margin: 1.5rem 0;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Peer Benchmark</h4>
+                    <img src="Financial Analytics/Page 2.jpg" alt="Peer Benchmark"
+                        style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+
+                <div style="margin: 1.5rem 0;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Company Deep Dive</h4>
+                    <img src="Financial Analytics/Page 3.jpg" alt="Company Deep Dive"
+                        style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+
+                <p style="margin-top: 1.5rem; text-align: center; color: var(--text-light);">
+                    <em>Interactive version available upon request</em>
+                </p>
+            </div>
+        </div>
+    </div>
+
     <div id="ml1Modal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal('ml1')">&times;</span>
@@ -677,8 +747,7 @@
 
             <h3>Technical Approach</h3>
             <ul style="margin: 1rem 0; line-height: 1.8; color: var(--text-light);">
-                <li><strong>Data Processing:</strong> Handled missing values, outliers, and performed feature scaling
-                </li>
+                <li><strong>Data Processing:</strong> Handled missing values, outliers, and performed feature scaling</li>
                 <li><strong>Feature Engineering:</strong> Created new features based on borrower financial patterns and
                     loan characteristics</li>
                 <li><strong>Model Selection:</strong> Tested multiple algorithms (Random Forest, XGBoost, Logistic
